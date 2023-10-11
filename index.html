@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASADE-ASADE</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-text">ASADE-ASADE</div>
+    <div class="background-blur"></div>
+    <div class="form-container">
+        <form class="login-form">
+            <h2>login</h2>
+            <input type="text" placeholder="Username" required>
+            <div class="password-wrapper">
+                <input type="password" id="loginpassword" placeholder="password" required>
+                <ion-icon class="toggle-password" name="eye-outline" onclick="togglePasswordVisibility'login password'"></ion-icon>
+            </div>
+            <button type="submit">login</button>
+        </form>
+
+        <form class="sigup-form">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <div class="password-wrapper">
+                    <input type="password" id="signupPassword" placeholder="password" required>
+                    <ion-icon class="toggle-password" name="eye-outline" onclick="togglePasswordVisibility'signupPassword'"></ion-icon>
+                </div>
+                <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

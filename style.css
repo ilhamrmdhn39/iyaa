@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.loading-text {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 1;
+    text-shadow: 0 0 10px #ffffff,
+    0 0 20px #ffffff,
+    0 0 30px #00ff00,
+    0 0 40px #00ff00,
+    0 0 50px #00ff00,
+    0 0 60px #00ff00,
+    animation: glowOut 4s forwards 2s;
+}
+
+@keyframes glowOut {
+    0%{
+        opacity: 1;
+        text-shadow: 0 0 10px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #00ff00,
+        0 0 40px #00ff00,
+        0 0 50px #00ff00,
+        0 0 60px #00ff00,
+    }
+    100% {
+        opacity: 0;
+        text-shadow: none;
+    }
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('background.jpeg') center/cover no-repeat;
+    filter: blur(2px);
+    z-index: -1;
+    animation: applyBlur 2s forwards 2s;
+    filter: none;
+    animation: applyBlur 0.5s ease-in-out 2s forwards;
+}
+
+@keyframes applyBlur {
+    from {
+        filter: none;
+    }
+    to{
+        filter: blur(2px);
+    }
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],button {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+input,button{
+    border: 1px sollid #ddd;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    transform:scale(1.05);
+}
+
+button {
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #59798f;
+}
+
+button:active {
+    background-color: darkred;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: apperAndSlideUP 0.5s ease-in-out 2s forwards;
+}
+
+@keyframes apperAndSlideUP {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    background-color: rgba(255,255,255,0.5);
+    padding:? 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 10px;
+    amnimation: slideUp 0.5s ease-in-out;
+    max-width: 220px;
+    width: 100%;
+}
+
+.password-wrapper {
+    position:relative;
+    display: inline-block;
+}
+.toggle-password {
+    position; absolute;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
